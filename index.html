@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Mis Proyectos de Animación</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, 'Segoe UI', 'Poppins', sans-serif;
+            background: linear-gradient(145deg, #1a1e2b 0%, #0b0d17 100%);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            color: #f0f3fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(15, 20, 35, 0.6);
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 2rem 2rem 2rem 2rem;
+            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 100, 0.3);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFD966, #FFB347);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.3px;
+        }
+
+        .sub {
+            text-align: center;
+            color: #a5b4fc;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            border-bottom: 1px dashed #ffd96666;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0.3rem;
+        }
+
+        .projects-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .projects-list li {
+            margin: 1rem 0;
+            /* Eliminado el efecto de transformación al hover */
+        }
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(30, 36, 55, 0.8);
+            backdrop-filter: blur(4px);
+            padding: 1rem 1.5rem;
+            border-radius: 1.2rem;
+            text-decoration: none;
+            color: #facc15;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            transition: none; /* Sin transición */
+            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Eliminado por completo el efecto hover del enlace */
+        .project-link:hover {
+            /* Sin cambios en fondo, color ni bordes */
+            background: rgba(30, 36, 55, 0.8);
+            color: #facc15;
+            border-color: rgba(250, 204, 21, 0.3);
+            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+        }
+
+        /* Opcional: si no quieres ningún cambio en la imagen al hover, no agregas nada */
+
+        .footer-note {
+            text-align: center;
+            margin-top: 1.8rem;
+            font-size: 0.7rem;
+            color: #7e8aa2;
+        }
+
+        @media (max-width: 550px) {
+            .container {
+                padding: 1.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .project-link {
+                font-size: 0.9rem;
+                padding: 0.8rem 1rem;
+            }
+            .project-icon {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>📂 PROYECTOS DE ANIMACIÓN</h1>
+    <div style="text-align: center;">
+        <div class="sub">▶ Selecciona un proyecto para abrir su carpeta</div>
+    </div>
+
+    <ul class="projects-list">
+        <li>
+            <a href="Animación_Biografia/index.html" class="project-link">
+                <img src="icono/icon1.png" alt="icono" class="project-icon">
+                Animación_Biografía
+            </a>
+        </li>
+        <li>
+            <a href="Animacion_Comercial_Coco/index.html" class="project-link">
+                <img src="icono/icon1.png" alt="icono" class="project-icon">
+                Animacion_Comercial_Coco
+            </a>
+        </li>
+        <li>
+            <a href="Animación_Estilos/index.html" class="project-link">
+                <img src="icono/icon1.png" alt="icono" class="project-icon">
+                Animación_Estilos
+            </a>
+        </li>
+        <li>
+            <a href="Animacion_lenguajes_foto/index.html" class="project-link">
+                <img src="icono/icon1.png" alt="icono" class="project-icon">
+                Animacion_lenguajes_foto
+            </a>
+        </li>
+        <li>
+            <a href="Animación_Tablero_Ajedrez/index.html" class="project-link">
+                <img src="icono/icon1.png" alt="icono" class="project-icon">
+                Animación_Tablero_Ajedrez
+            </a>
+        </li>
+    </ul>
+
+    <div class="footer-note">
+        💡 Haz clic en cualquier proyecto → se abrirá su carpeta.<br>
+        Si no funciona, clic derecho → "Abrir en nueva pestaña".
+    </div>
+</div>
+</body>
+</html>

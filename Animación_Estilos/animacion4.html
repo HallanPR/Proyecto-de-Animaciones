@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>ANIMACION DE MEGAMAN</title>
+    <style>
+        * {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        /* 1. Cambio de color de fondo del body */
+        body {
+            background-color: rgb(123, 47, 47);
+        }
+
+        /* 2. Centrado horizontal del título */
+        h1 {
+            text-align: center;
+        }
+
+        /* Se mantiene el contenedor intacto según tus instrucciones */
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: white; /* Opcional: fondo para que resalte sobre el rojo */
+        }
+
+        .cuadrito{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            animation: cuadrito 3s infinite linear;
+        }
+
+        @keyframes cuadrito{
+            from{
+                left: 0;
+            }
+            to{
+                left: 300px;
+            }
+        }
+
+        .cuadrito img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>   
+<body>
+    <h1>ANIMACION DE MEGAMAN X</h1>
+    <div class="contenedor">
+        <div class="cuadrito">
+            <img src="img/megamanx.gif" alt="Megaman X">
+        </div>
+    </div>
+    <br><a href="index.html" style="color: white;">Volver</a>
+</body>
+</html>
