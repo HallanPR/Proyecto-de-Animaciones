@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0%;
+                padding: 0px;
+            }
+            .contenedor{
+                width: 800px;
+                height: 300px;
+                border: 5px solid black;
+                border-radius: 20px;
+                margin: 0 auto;
+                position:relative; 
+                overflow: hidden;    
+
+            }
+            .cuadrito{
+                width: 100px;
+                height: 100px;
+                position: absolute;  
+                top:0px;
+                left:0px ;          
+                animation: cuadrito 4s infinite;
+
+            }
+            .abeja{
+                position: absolute;
+                width:100%;
+                z-index: 0;
+            }
+            
+            @keyframes cuadrito {
+
+                0%{
+                    top:0px;
+                    left: -100px;
+                    rotate: 45deg;
+                }
+                50%{
+                    top:200px;
+                    left: 350px;
+                    rotate: 0deg;
+                }
+                100%{
+                    top:0px;
+                    left: 800px;
+                    rotate: 45deg;
+
+                }
+            
+            }
+            .cuadrito2{
+                width: 100px;
+                height: 100px;
+                position: absolute;  
+                top:0px;
+                left:0px ;          
+                animation: cuadrito2 5s infinite 2s;
+
+            }
+            .abeja2{
+                position: absolute;
+                width:100%;
+                z-index: 0;
+            }
+            
+            @keyframes cuadrito2 {
+
+                0%{
+                    top:0px;
+                    left: -100px;
+                    rotate: 45deg;
+                }
+                50%{
+                    top:200px;
+                    left: 350px;
+                    rotate: 0deg;
+                }
+                100%{
+                    top:0px;
+                    left: 800px;
+                    rotate: 45deg;
+
+                }
+            
+            }
+        
+        .pradera{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            }
+
+        .boton {
+            display: inline-block; 
+            padding: 10px 20px;
+            text-align: center;
+            font-family: Arial;
+            color: #333;
+            text-decoration: none;
+            border: 2px solid #333;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        </style>
+    </head>
+    <body>
+        <h1 style="display: block;text-align: center;">Abejita Animada</h1><br>
+        <div class="contenedor">
+            <div class="cuadrito">
+                <img class="abeja" src="img/abejita1.png" alt="">
+            </div>
+            <div class="cuadrito2">
+                <img class="abeja2" src="img/abejita2.png" alt="">
+            </div>
+            <img class="pradera" src="img/pradera.jpg" alt="">
+        </div><br>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="../../index.html" class="boton">Volver al menú principal</a>
+        </div>
+    </body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎬 Mis Proyectos de Animación</title>
+    <title>Inicio | Trabajos y Tareas</title>
     <style>
         * {
             margin: 0;
@@ -12,163 +12,214 @@
         }
 
         body {
-            font-family: system-ui, 'Segoe UI', 'Poppins', sans-serif;
-            background: linear-gradient(145deg, #1a1e2b 0%, #0b0d17 100%);
-            min-height: 100vh;
-            padding: 2rem 1.5rem;
-            color: #f0f3fa;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background-image: url('img/fondo.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 2rem 1rem;
+            color: #1f2a44;
+            position: relative;
         }
 
-        .container {
-            max-width: 800px;
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(106, 13, 13, 0.75);
+            z-index: 0;
+        }
+
+        .carga, .contenedor {
+            position: relative;
+            z-index: 1;
+        }
+
+        .carga {
+            position: fixed;
+            inset: 0;
+            background-color: #6A0D0D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            animation: desvanecer 0.5s ease 3s forwards;
+        }
+
+        .imagen-carga {
+            width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .carga p {
+            color: #D4AF37;
+            font-size: 1.2rem;
+        }
+
+        @keyframes desvanecer {
+            0% { opacity: 1; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+
+        .contenedor {
+            max-width: 1100px;
             margin: 0 auto;
-            background: rgba(15, 20, 35, 0.6);
-            backdrop-filter: blur(4px);
-            border-radius: 2rem;
-            padding: 2rem 2rem 2rem 2rem;
-            box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 215, 100, 0.3);
+            background: rgba(253, 245, 230, 0.432);
+            border-radius: 16px;
+            padding: 1.8rem;
         }
 
         h1 {
-            font-size: 2.2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #FFD966, #FFB347);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e66;
             text-align: center;
-            margin-bottom: 0.3rem;
-            letter-spacing: -0.3px;
+            margin-bottom: 0.5rem;
         }
 
-        .sub {
+        .subtitulo {
             text-align: center;
-            color: #a5b4fc;
+            color: #4b5565;
             margin-bottom: 2rem;
-            font-weight: 400;
-            border-bottom: 1px dashed #ffd96666;
+            border-bottom: 1px solid #e2e8f0;
             display: inline-block;
             width: auto;
             margin-left: auto;
             margin-right: auto;
-            padding-bottom: 0.3rem;
+            padding-bottom: 0.4rem;
         }
 
-        .projects-list {
-            list-style: none;
-            margin: 2rem 0;
-        }
-
-        .projects-list li {
-            margin: 1rem 0;
-            /* Eliminado el efecto de transformación al hover */
-        }
-
-        .project-link {
+        .columnas {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(30, 36, 55, 0.8);
-            backdrop-filter: blur(4px);
-            padding: 1rem 1.5rem;
-            border-radius: 1.2rem;
-            text-decoration: none;
-            color: #facc15;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .columna {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.9); /* blanco semitransparente */
+            border: 1px solid #6A0D0D;
+            border-radius: 14px;
+            padding: 1.2rem 1.2rem 1.5rem;
+        }
+
+        .columna h2 {
+            font-size: 1.5rem;
             font-weight: 600;
-            font-size: 1.1rem;
-            border: 1px solid rgba(250, 204, 21, 0.3);
-            transition: none; /* Sin transición */
-            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid;
+            display: inline-block;
         }
 
-        /* Eliminado por completo el efecto hover del enlace */
-        .project-link:hover {
-            /* Sin cambios en fondo, color ni bordes */
-            background: rgba(30, 36, 55, 0.8);
-            color: #facc15;
-            border-color: rgba(250, 204, 21, 0.3);
-            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+        .izquierda h2 {
+            color: #1f6e8c;
+            border-bottom-color: #1f6e8c;
         }
 
-        .project-icon {
-            width: 24px;
-            height: 24px;
-            object-fit: contain;
-            filter: drop-shadow(0 1px 1px rgba(0,0,0,0.2));
+        .derecha h2 {
+            color: #D4AF37;
+            border-bottom-color: #D4AF37;
         }
 
-        /* Opcional: si no quieres ningún cambio en la imagen al hover, no agregas nada */
+        .lista {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+        }
 
-        .footer-note {
+        .lista li {
+            margin-bottom: 0.8rem;
+            color: #2c3e66;
+        }
+
+        .lista a {
+            text-decoration: none;
+            color: #1f6e8c;
+        }
+
+        .derecha .lista a {
+            color: #D4AF37;
+        }
+
+        .pie-pagina {
             text-align: center;
-            margin-top: 1.8rem;
-            font-size: 0.7rem;
-            color: #7e8aa2;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            font-size: 0.75rem;
+            color: #D4AF37;
+            border-top: 1px solid #e9ecef;
         }
 
-        @media (max-width: 550px) {
-            .container {
-                padding: 1.5rem;
+        @media (max-width: 700px) {
+            .contenedor {
+                padding: 1.2rem;
+            }
+            .columna {
+                padding: 1rem;
             }
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
             }
-            .project-link {
-                font-size: 0.9rem;
-                padding: 0.8rem 1rem;
+            .columna h2 {
+                font-size: 1.3rem;
             }
-            .project-icon {
-                width: 20px;
-                height: 20px;
+            .imagen-carga {
+                width: 80px;
             }
         }
     </style>
 </head>
 <body>
-<div class="container">
-    <h1>📂 PROYECTOS DE ANIMACIÓN</h1>
-    <div style="text-align: center;">
-        <div class="sub">▶ Selecciona un proyecto para abrir su carpeta</div>
+
+    <div class="carga">
+        <img class="imagen-carga" src="img/seoane.png" alt="Cargando">
+        <p>Bienvenido a mi Pagina Web</p>
     </div>
 
-    <ul class="projects-list">
-        <li>
-            <a href="Animación_Biografia/index.html" class="project-link">
-                <img src="icono/icon1.png" alt="icono" class="project-icon">
-                Animación_Biografía
-            </a>
-        </li>
-        <li>
-            <a href="Animacion_Comercial_Coco/index.html" class="project-link">
-                <img src="icono/icon1.png" alt="icono" class="project-icon">
-                Animacion_Comercial_Coco
-            </a>
-        </li>
-        <li>
-            <a href="Animación_Estilos/index.html" class="project-link">
-                <img src="icono/icon1.png" alt="icono" class="project-icon">
-                Animación_Estilos
-            </a>
-        </li>
-        <li>
-            <a href="Animacion_lenguajes_foto/index.html" class="project-link">
-                <img src="icono/icon1.png" alt="icono" class="project-icon">
-                Animacion_lenguajes_foto
-            </a>
-        </li>
-        <li>
-            <a href="Animación_Tablero_Ajedrez/index.html" class="project-link">
-                <img src="icono/icon1.png" alt="icono" class="project-icon">
-                Animación_Tablero_Ajedrez
-            </a>
-        </li>
-    </ul>
+    <div class="contenedor">
+        <h1>Curso: Animación de Graficos</h1>
+        <div style="text-align: center;">
+            <div class="subtitulo">Prof: Niels Arias Campos</div>
+        </div>
 
-    <div class="footer-note">
-        💡 Haz clic en cualquier proyecto → se abrirá su carpeta.<br>
-        Si no funciona, clic derecho → "Abrir en nueva pestaña".
+        <div class="columnas">
+            <div class="columna izquierda">
+                <h2>Trabajos en clase</h2>
+                <ul class="lista">
+                    <li><a href="trabajos_clase/Estilos de animación/index.html">Estilos de animación</a></li>
+                    <li><a href="trabajos_clase/Conociendo mi Perú/index.html">Costa, Sierra y Selva</a></li>
+                    <li><a href="trabajos_clase/Animacion_abejita/index.html">Abejita Animada</a></li>
+                    <li><a href="trabajos_clase/CLIPPATH/index.html">Clippath - Satr Lord</a></li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: #5b6e8c;">✔ Proyectos realizados durante las sesiones.</p>
+            </div>
+
+            <div class="columna derecha">
+                <h2>Tareas</h2>
+                <ul class="lista">
+                    <li><a href="tareas/Animación_Biografia/index.html">Biografía de Sam Altman</a></li>
+                    <li><a href="tareas/Animacion_Comercial_Coco/index.html">Comercial del Coco</a></li>
+                    <li><a href="tareas/Animacion_lenguajes_foto/index.html">Animación por pasos</a></li>
+                    <li><a href="tareas/Animación_Tablero_Ajedrez/index.html">Tablero_Ajedrez</a></li>
+                    <li><a href="tareas/Efecto_Parallax/index.html">Animación_Efecto_Parallax</a></li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.8rem; color: #D4AF37;">✔ Trabajos en Casa</p>
+            </div>
+        </div>
+
+        <div class="pie-pagina">
+            Hecho por: Anthony Daniel Principe Rivas :'3
+        </div>
     </div>
-</div>
+
 </body>
 </html>

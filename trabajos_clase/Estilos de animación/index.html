@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>ANIMACION 3 CSS</title>
+    <style>
+        *{
+            --color-guinda: #6A0D0D;
+            --color-texto: white;
+            --color-enlace: #ffcc00;
+            --color-boton-fondo: #f9f9f9;
+            --color-boton-borde: #333;
+            --ancho-contenedor: 300px;
+            border-radius: 5%;
+        }
+
+        body {
+            background-color: var(--color-guinda);
+            color: var(--color-texto);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contenedor-e {
+            width: var(--ancho-contenedor);
+            margin-left: auto;
+            margin-right: auto;
+            background-color: var(--color-guinda);
+            padding: 20px;
+            border: 2px solid var(--color-texto);
+        }
+
+        a {
+            color: var(--color-enlace);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            color: var(--color-boton-borde);
+            border: 2px solid var(--color-boton-borde);
+            background-color: var(--color-boton-fondo);
+            border-radius: 5px;   /* ← Única adición */
+        }
+
+        .centrar {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>    
+<body>
+    <h1>PRACTICA DE ESTILOS DE ANIMACIÓN</h1>
+    
+    <div class="contenedor-e">
+        <ul>
+            <li><a href="animacion2.html">MOVIMIENTO HORIZONTAL</a></li>
+            <li><a href="animacion1.html">MOVIMIENTO VERTICAL</a></li>
+            <li><a href="animacion3.html">MOVIMIENTO DIAGONAL</a></li>
+            <li><a href="animacion4.html">MEGAMAN</a></li>
+            <li><a href="animacion5.html">OVNI EXTRATERRESTRE</a></li>
+        </ul>
+
+        <div class="centrar">
+            <a href="../../index.html" class="boton">Volver al menú principal</a>
+        </div>
+    </div>
+</body>
+</html>

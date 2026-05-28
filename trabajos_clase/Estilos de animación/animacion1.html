@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>DIAGONAL</title>
+    <title>ANIMACION 3 CSS</title>
     <style>
         * {
             padding: 0px;
@@ -8,12 +8,12 @@
         }
 
         body {
-            background-color: rgb(123, 47, 47);
+            background-color: #6A0D0D;
+            color: white;
         }
 
         h1 {
             text-align: center;
-            color: white; 
             margin: 20px 0;
         }
 
@@ -26,42 +26,41 @@
             overflow: hidden;
             background-color: white; 
         }
+
         .cuadrito{
             width: 100px;
             height: 100px;
             background-color: black;
             position: absolute;
             top: 0;
-            left: 0;
-            animation: cuadrito 5s infinite linear;
+            left: 150px;
+            animation: cuadrito 3s infinite linear;
         }
 
         @keyframes cuadrito{
             from{
                 top: 0;
-                left: 0;
             }
             to{
                 top: 100px;
-                left: 300px;
             }
         }
 
-
-        .volver{
+        a {
             display: block;
             text-align: center;
             color: white;
             margin-top: 10px;
+            text-decoration: none;
         }
     </style>
 </head>    
 <body>
-    <h1>ANIMACION EN DIAGONAL</h1>
+    <h1>Estilo de Arriba a Abajo</h1>
     <div class="contenedor">
         <div class ="cuadrito"></div>
     </div>
     <br>
-    <a href="index.html" class="volver">Volver</a>
+    <a href="index.html">Volver</a>
 </body>
 </html>

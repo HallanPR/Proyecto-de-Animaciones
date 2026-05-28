@@ -1,0 +1,203 @@
+<html>
+    <head>
+        <title>Visita Perú</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                text-align: center;
+                font-family: Arial, sans-serif;
+                margin: 20px 0;
+                color: #c0392b;
+            }
+
+            .contenedor{
+                width: 800px;
+                height: 300px;
+                position: relative;
+                border-radius: 20px;
+                margin: 0 auto;
+                border: 1px solid black;
+                overflow: hidden;
+            }
+            .marco1{
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                animation: marco1 3s ease-out forwards;
+                background-image: url(img/costa.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            /* Estilo común para los nombres con div */
+            .nombre {
+                position: absolute;
+                top: 10px;
+                left: 0;
+                right: 0;
+                text-align: center;
+                background: rgba(0,0,0,0.6);
+                color: white;
+                font-family: Arial;
+                font-size: 18px;
+                padding: 5px;
+                z-index: 1;
+            }
+            /* Ajuste especial para el nombre más largo */
+            .marco4 .nombre {
+                font-size: 16px;
+            }
+
+            @keyframes marco1{
+                0%{
+                    top: -300px;
+                    left: 0px;
+                    transform: rotateX(180deg);
+                    opacity: 0;
+                }
+                50%{
+                    top: 20px;
+                    transform: rotateX(30deg);
+                }
+                100%{
+                    top: 0px;
+                    left: 0px;
+                    transform: rotateX(0deg);
+                    opacity: 1;
+                }
+            }
+
+            .marco2{
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 200px;
+                animation: marco2 3s cubic-bezier(0.34, 1.2, 0.64, 1) forwards;
+                background-image: url(img/sierra.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes marco2{
+                0%{
+                    top: 300px;
+                    left: 200px;
+                    transform: rotate(360deg) scale(0.2);
+                    opacity: 0;
+                }
+                70%{
+                    top: -10px;
+                    transform: rotate(-10deg) scale(1.05);
+                }
+                100%{
+                    top: 0px;
+                    left: 200px;
+                    transform: rotate(0deg) scale(1);
+                    opacity: 1;
+                }
+            }
+
+            .marco3{
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 400px;
+                animation: marco3 3s ease-out forwards;
+                background-image: url(img/selva.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes marco3{
+                0%{
+                    left: 600px;
+                    top: -200px;
+                    transform: rotateY(180deg);
+                    opacity: 0;
+                }
+                80%{
+                    left: 390px;
+                    top: 10px;
+                    transform: rotateY(20deg);
+                }
+                100%{
+                    left: 400px;
+                    top: 0px;
+                    transform: rotateY(0deg);
+                    opacity: 1;
+                }
+            }
+
+            .marco4{
+                width: 200px;
+                height: 300px;
+                position: absolute;
+                top: 0;
+                left: 600px;
+                animation: marco4 3s ease-in-out forwards;
+                background-image: url(img/mixta.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            @keyframes marco4{
+                0%{
+                    left: 800px;
+                    top: 150px;
+                    transform: rotate(-180deg);
+                    opacity: 0;
+                }
+                60%{
+                    left: 580px;
+                    transform: rotate(15deg);
+                }
+                100%{
+                    left: 600px;
+                    top: 0px;
+                    transform: rotate(0deg);
+                    opacity: 1;
+                }
+            }
+            .boton {
+                display: inline-block; 
+                padding: 10px 20px;
+                text-align: center;
+                font-family: Arial;
+                color: #333;
+                text-decoration: none;
+                border: 2px solid #333;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bienvenidos a mi Perú</h1>
+        <div class="contenedor">
+            <div class="marco1">
+                <div class="nombre">Costa</div>
+            </div>
+            <div class="marco2">
+                <div class="nombre">Sierra</div>
+            </div>
+            <div class="marco3">
+                <div class="nombre">Selva</div>
+            </div>
+            <div class="marco4">
+                <div class="nombre">Machupicchu</div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="../../index.html" class="boton">Volver al menú principal</a>
+        </div>  
+
+    </body>
+</html>
