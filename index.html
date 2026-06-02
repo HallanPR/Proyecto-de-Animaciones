@@ -5,6 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Pagina Web</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Pagina Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            background-image: url('img/fondo.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 2rem 1rem;
+            color: #1f2a44;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(106, 13, 13, 0.75);
+            z-index: 0;
+        }
+
+        .carga, .contenedor {
+            position: relative;
+            z-index: 1;
+        }
+
+        .carga {
+            position: fixed;
+            inset: 0;
+            background-color: #6A0D0D;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            visibility: visible;
+            animation: desvanecer 0.5s ease 3s forwards;
+        }
+
+        .imagen-carga {
+            width: 150px;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        .carga p {
+            color: #D4AF37;
+            font-size: 1.2rem;
+        }
+
+        @keyframes desvanecer {
+            0% { opacity: 1; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(253, 245, 230, 0.432);
+            border-radius: 16px;
+            padding: 1.8rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #2c3e66;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitulo {
+            text-align: center;
+            color: #4b5565;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0.4rem;
+        }
+
+        .columnas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .columna {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #6A0D0D;
+            border-radius: 14px;
+            padding: 1.2rem 1.2rem 1.5rem;
+        }
+
+        .columna h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid;
+            display: inline-block;
+        }
+
+        .izquierda h2 {
+            color: #1f6e8c;
+            border-bottom-color: #1f6e8c;
+        }
+
+        .derecha h2 {
+            color: #D4AF37;
+            border-bottom-color: #D4AF37;
+        }
+
+        .lista {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        .lista li {
+            margin-bottom: 0.8rem;
+            color: #2c3e66;
+        }
+
+        .lista a {
+            text-decoration: none;
+            color: #1f6e8c;
+        }
+
+        .derecha .lista a {
+            color: #D4AF37;
+        }
+
+        .pie-pagina {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            font-size: 0.75rem;
+            color: #D4AF37;
+            border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 700px) {
+            .contenedor {
+                padding: 1.2rem;
+            }
+            .columna {
+                padding: 1rem;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .columna h2 {
+                font-size: 1.3rem;
+            }
+            .imagen-carga {
+                width: 80px;
+            }
+        }
+    </style>
 </head>
 <body>
 
