@@ -1,0 +1,81 @@
+body {
+            background-color: #111;
+            color: white;
+            font-family: Tahoma, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 300px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        h1 {
+            opacity: 0;
+            animation: parpadeo 2s steps(1, end) forwards;
+        }
+
+        @keyframes parpadeo {
+            0%, 33%, 66% { opacity: 1; }
+            16%, 50%, 83% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        
+        .foto1 { 
+            opacity: 0;
+            animation: aparecer 1s forwards;
+            animation-delay: 3s; 
+        }
+
+        .subtitulo { 
+            opacity: 0;
+            animation: aparecer 1s forwards;
+            animation-delay: 4.5s; 
+        }
+
+        .parrafo1 { 
+            opacity: 0;
+            animation: aparecer 1s forwards;
+            animation-delay: 6s; 
+        }
+
+        .foto2 { 
+            opacity: 0;
+            animation: aparecer 1s forwards;
+            animation-delay: 7.5s; 
+        }
+
+        .parrafo2 { 
+            opacity: 0;
+            animation: aparecer 1s forwards;
+            animation-delay: 9s; 
+        }
+
+        .firma { 
+            opacity: 0;
+            animation: aparecer 1s forwards;
+            animation-delay: 10.5s; 
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            color: #222;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #222;
+            }

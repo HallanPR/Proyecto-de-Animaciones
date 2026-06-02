@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(144, 99, 27, 0.499);
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    color: #333;
+}
+
+#cua1{ background-color: black; }
+#cua2{ background-color: white; }
+#cua3{ background-color: black; }
+#cua4{ background-color: white; }
+#cua5{ background-color: black; }
+#cua6{ background-color: white; }
+#cua7{ background-color: black; }
+#cua8{ background-color: white; }
+#cua9{ background-color: black; }
+#cua10{ background-color: white; }
+#cua11{ background-color: black; }
+#cua12{ background-color: white; }
+#cua13{ background-color: black; }
+#cua14{ background-color: white; }
+
+#cua1,#cua2,#cua3,#cua4,#cua5,#cua6,#cua7,#cua8,#cua9,#cua10,#cua11,#cua12,#cua13,#cua14{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#contenedor1,#contenedor2,#contenedor3,#contenedor4,#contenedor5,#contenedor6,#contenedor7,#contenedor8{
+    height: 100px;
+    width: 100%;
+    /* Mantenemos el mismo color aquí para que se fusione perfectamente con el body */
+    background-color: rgba(144, 99, 27, 0.499); 
+    clear: both;
+}
+.boton {
+            display: inline-block;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            color: #222;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #222;
+        }

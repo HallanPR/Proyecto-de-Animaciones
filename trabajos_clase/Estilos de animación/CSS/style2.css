@@ -1,0 +1,51 @@
+* {
+            padding: 0px;
+            margin: 0px;
+        }
+        body {
+            background-color: #6A0D0D;
+            color: white; 
+            font-family: sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contenedor{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: white; 
+        }
+
+        .cuadrito{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            animation: cuadrito 3s infinite linear;
+        }
+
+        @keyframes cuadrito{
+            from{
+                left: 0;
+            }
+            to{
+                left: 300px;
+            }
+        }
+
+        .volver{
+            display: block;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            margin-top: 15px;
+        }

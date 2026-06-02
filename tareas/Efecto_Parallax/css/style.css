@@ -1,0 +1,79 @@
+*{margin:0;padding:0;box-sizing:border-box}
+
+        body{min-height:100vh;background:#0a0f1a;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;font-family:system-ui}
+        
+        audio {display: none;}
+
+        h1{font-size:32px;margin-top:0;margin-bottom:0;background:linear-gradient(135deg,#e0e0e0,#b0b0b0);background-clip:text;-webkit-background-clip:text;color:transparent;font-weight:600;letter-spacing:2px;font-family:'Segoe UI','Poppins',sans-serif;text-align:center}
+        
+        .caja{width:300px;height:400px;position:relative;margin:0 auto;border-radius:20px;overflow:hidden;box-shadow:0 20px 35px rgba(0,0,0,0.4)}
+        
+        .fondo{display:block;width:100%;height:100%;object-fit:cover;object-position:center;animation:alejar 2s ease-out forwards, respirar 8s ease-in-out infinite 2s}
+        
+        @keyframes alejar{0%{transform:scale(1.25);opacity:0}100%{transform:scale(1);opacity:1}}
+        
+        @keyframes respirar{0%{transform:scale(1)}50%{transform:scale(1.04)}100%{transform:scale(1)}}
+        
+        .capas{position:absolute;top:0;left:0;width:100%;height:100%}
+        
+        .foto{position:absolute;border-radius:14px;opacity:0;animation-fill-mode:forwards}
+        
+        /* Entradas de las IMG */
+        @keyframes entrar{0%{opacity:0;transform:scale(0.85)}100%{opacity:1;transform:scale(1)}}
+        @keyframes entrar2{0%{opacity:0;transform:translate(20px,-12px) scale(0.85)}100%{opacity:1;transform:translate(0,0) scale(1)}}
+        @keyframes entrar3{0%{opacity:0;transform:translate(0,25px) scale(0.85)}100%{opacity:1;transform:translate(0,0) scale(1)}}
+        @keyframes entrar4{0%{opacity:0;transform:scale(0.75)}100%{opacity:1;transform:scale(1)}}
+        @keyframes entrar5{0%{opacity:0;transform:translate(-25px,15px) scale(0.8)}100%{opacity:1;transform:translate(0,0) scale(1)}}
+        
+        /* animaciones de las IMG */
+        @keyframes flotar1{0%{transform:translateY(0) scale(1)}50%{transform:translateY(-5px) scale(1.02)}100%{transform:translateY(0) scale(1)}}
+        @keyframes girar2{0%{transform:rotate(-3deg)}100%{transform:rotate(3deg)}}
+        @keyframes girar3{0%{transform:rotateY(0deg)}100%{transform:rotateY(360deg)}}
+        @keyframes mover4{0%{transform:translateX(0) rotate(0deg)}100%{transform:translateX(50px) rotate(8deg)}}
+        @keyframes mover5{0%{transform:translateX(0)}100%{transform:translateX(-30px)}}
+        @keyframes girar6{0%{transform:rotate(-4deg)}100%{transform:rotate(4deg)}}
+
+        /* posiciones y animaciones*/
+        .foto1{top:150px;left:135px;width:70px;animation:entrar 3s ease-out 2s forwards, flotar1 4s ease-in-out 2.9s infinite alternate}
+        .foto2{top:20px;left:70px;width:160px;max-width:none;animation:entrar2 0.9s ease-out 2s forwards, girar2 2s ease-in-out 2.9s infinite alternate}
+        .foto3{top:120px;left:190px;width:25px;animation:entrar3 0.85s ease-out 2s forwards, girar3 1.5s linear 2.85s infinite}
+        .foto4{top:250px;left:50px;width:40px;animation:entrar4 0.9s ease-out 2s forwards, mover4 3s ease-in-out 2.9s infinite alternate}
+        .foto5{top:235px;left:220px;width:55px;animation:entrar5 0.95s ease-out 2s forwards, mover5 2.5s ease-in-out 2.95s infinite alternate}
+        .foto6{top:282px;left:125px;width:81px;animation:entrar 3s ease-out 2s forwards, girar6 2.5s ease-in-out 2.9s infinite alternate}
+        .foto:hover{transform:scale(1.06);filter:drop-shadow(0 8px 18px rgba(0,0,0,0.5));z-index:20}
+        
+        /* Para admitir los parámetros de los celulares */
+        @media (max-width:350px){
+            .caja{width:280px;height:373px}
+            .foto1{width:55px;top:140px;left:126px}
+            .foto2{top:15px;left:60px;width:140px}
+            .foto3{top:149px;left:202px;width:50px}
+            .foto4{top:242px;left:45px;width:58px}
+            .foto5{top:231px;left:190px;width:52px}
+            .foto6{top:266px;left:116px;width:72px}
+
+            @keyframes mover4{
+                100%{
+                    transform:translateX(45px)
+                    rotate(8deg)
+                }
+            }
+
+            @keyframes mover5{
+                100%{transform:translateX(-8px)
+                }
+            }
+
+            h1{font-size:24px}
+        }
+
+        .boton {
+            display: inline-block;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            color: #222;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #222;
+        }

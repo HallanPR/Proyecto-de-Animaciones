@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin: 30px 0 25px 0;
+}
+
+.contenedor {
+    width: 360px;
+    height: 600px;
+    border: 1px solid black;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: url(../img/img0.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes aparecer {
+    0% {
+        transform: translateX(-50%) scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerPies {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pie-mover-izq {
+    0% { transform: translate(0,0) rotate(0deg); }
+    100% { transform: translate(-12px, 6px) rotate(-15deg); }
+}
+
+@keyframes pie-mover-der {
+    0% { transform: translate(0,0) rotate(0deg); }
+    100% { transform: translate(12px, 6px) rotate(15deg); }
+}
+
+.triangulo {
+    width: 130px;
+    height: 130px;
+    background-image: url(../img/gorro.webp);
+    background-size: cover;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    animation: aparecer 1s ease-out forwards;
+}
+
+.circulo {
+    width: 110px;
+    height: 110px;
+    background-image: url(../img/cara.webp);
+    background-size: cover;
+    clip-path: circle(50% at 50% 50%);
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: aparecer 1s ease-out forwards;
+}
+
+.trapecio {
+    width: 100px;
+    height: 140px;
+    background-image: url(../img/chaketa.webp);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: aparecer 1s ease-out forwards;
+}
+
+.hexagono {
+    width: 200px;
+    height: 40px;
+    background-image: url(../img/img0.webp);
+    background-size: cover;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    animation: aparecer 1s ease-out forwards;
+}
+
+.wrapper-pie-izq, .wrapper-pie-der {
+    position: absolute;
+    top: 365px;
+    width: 90px;
+    height: 45px;
+    z-index: 5;
+    animation: aparecerPies 1s ease-out forwards;
+}
+.wrapper-pie-izq { left: 80px; }
+.wrapper-pie-der { left: 190px; }
+
+.elipse-I {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gorro.webp);
+    background-size: cover;
+    clip-path: ellipse(45% 25% at 50% 50%);
+    transform-origin: 50% 50%;
+    animation: pie-mover-izq 0.9s ease-in-out 1s infinite alternate;
+    z-index: 5;
+}
+
+.elipse-D {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/gorro.webp);
+    background-size: cover;
+    clip-path: ellipse(45% 25% at 50% 50%);
+    transform-origin: 50% 50%;
+    animation: pie-mover-der 0.9s ease-in-out 1s infinite alternate;
+    z-index: 5;
+}
+
+.boton {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #ff8c00;
+    color: #1e1a1a;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: 0.1s linear;
+    letter-spacing: 1px;
+}
+
+.btn-volver:hover {
+    background-color: #e07c00;
+    transform: scale(0.98);
+}

@@ -1,0 +1,79 @@
+    * {
+            padding: 0px;
+            margin: 5px;
+        }
+
+        body {
+            background-color: #6A0D0D;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .contenedor{
+            width: 600px;
+            height: 400px;
+            background-color: black;
+            border: 1px solid black;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .ovni {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+            animation: ovni 1s infinite ease-in-out; 
+        }
+
+        @keyframes ovni{
+            from{ rotate: -5deg; }
+            to{ rotate: 10deg; }
+        }
+
+        .ovni img{
+            width: 100px;
+            height: 100px;
+        }
+
+        .estrella1, .estrella2, .estrella3, .estrella4, .estrella5,
+        .estrella6, .estrella7, .estrella8, .estrella9, .estrella10,
+        .estrella11, .estrella12, .estrella13, .estrella14 {
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            position: absolute;
+            left: -10px;
+            animation-name: estrella;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .estrella1 { top: 20px;  animation-duration: 5s;  animation-delay: 0s; }
+        .estrella2 { top: 150px; animation-duration: 8s;  animation-delay: 2s; }
+        .estrella3 { top: 320px; animation-duration: 6s;  animation-delay: 4s; }
+        .estrella4 { top: 80px;  animation-duration: 10s; animation-delay: 1s; }
+        .estrella5 { top: 220px; animation-duration: 7s;  animation-delay: 3s; }
+        .estrella6 { top: 370px; animation-duration: 9s;  animation-delay: 0.5s; }
+        .estrella7 { top: 50px;  animation-duration: 4s;  animation-delay: 5s; }
+        .estrella8 { top: 280px; animation-duration: 11s; animation-delay: 2.5s; }
+        .estrella9 { top: 110px; animation-duration: 5.5s; animation-delay: 1.5s; }
+        .estrella10{ top: 350px; animation-duration: 12s; animation-delay: 0s; }
+        .estrella11{ top: 190px; animation-duration: 6.5s; animation-delay: 6s; }
+        .estrella12{ top: 240px; animation-duration: 8.5s; animation-delay: 3.5s; }
+        .estrella13{ top: 10px;  animation-duration: 4.5s; animation-delay: 1s; }
+        .estrella14{ top: 300px; animation-duration: 7.5s; animation-delay: 4.5s; }
+
+        @keyframes estrella{
+            from{ left: -10px; }
+            to{ left: 610px; }
+        }
+
+        a { color: white; text-align: center; display: block; text-decoration: none; }

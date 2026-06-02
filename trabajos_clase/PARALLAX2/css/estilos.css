@@ -1,0 +1,92 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+body{
+    background-color: black;
+}
+.contenedor{
+    width: 500px;
+    height: 800px;
+    border: 1px solid white;   
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.cielo{
+    position: absolute;
+    left:-200px;
+    top:-150px;
+    filter:blur(5px);
+    animation: cielo 30s 1 forwards;
+    z-index: 1; /* Al fondo */
+}
+@keyframes cielo{
+    from{
+        scale:100%;
+    }
+    to{
+        scale:130%;
+    }
+}
+
+.montaña{
+    position: absolute;
+    left:-600px;
+    animation: montaña 20s 1 forwards;
+    z-index: 2; /* Por encima del cielo */
+}
+@keyframes montaña{
+    from{
+        top:0px;
+        scale: 100%;
+    }
+    to{
+        top:-50px;
+        scale: 105%;
+    }
+}
+
+.persona{
+    position: absolute;
+    width: 800px;
+    left: -150px;
+    top: 300px;
+    z-index: 4; /* Por delante del nombre */
+}
+
+.neblina{
+    position: absolute;
+    width: 1000px;
+    left: -150px;
+    top: 400px;
+    z-index: 5;
+}
+
+.nombre-texto {
+    position: absolute;
+    left: 50%;
+    top: 450px;
+    transform: translateX(-50%);
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    z-index: 6;
+    white-space: nowrap;
+    animation: aparecer 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
